@@ -1,6 +1,6 @@
 ## Another Nuxt SSR PWA
 
-See the live version here https://danielwakefield.co.uk
+See the live version here https://3dsculptures.co.uk/
 
 Just another Vue.js/Nuxt.js static generated, server side rendered, progressive web app.
 
