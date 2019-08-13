@@ -1,0 +1,57 @@
+/*reset*/
+html {box-sizing: border-box; overflow-y:scroll;}
+*, *:before, *:after {box-sizing: inherit; }
+body{background: #fff;color: #111; font-family: 'Playfair Display', serif; font-weight:normal;font-size:80%; margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%; height: 100%;}
+a:focus,button:focus,input:focus,textarea:focus,:focus {outline: none;}
+
+
+/*rows + columns*/
+.row{display: block; float: left; width: 100%; max-width: 2560px; overflow: hidden; position: relative;}
+.row:after{content: '';display: block;clear: both;}
+.ctr{margin: 0 auto; min-height: 100vh;width: 94%; max-width: 1440px;}
+.fs{min-height: 100vh;}
+.flex{text-align: center; display: flex; align-items: center; justify-content: center;}
+
+
+/* Transitions using the page hook */
+.page-enter-active, .page-leave-active {
+    transition: all .30s ease-out;
+  }
+  .page-enter, .page-leave-active {
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+.header{height: 50px;background: #111;position: fixed; top: 0; left: 0; padding: 1em; z-index: 999; transition: all ease 0.3s;}
+.logo{display: block; width: 240px; position: absolute; top: 0.5em; left: calc(50% - 120px); z-index: 2000;}
+.logo svg{display: block; height: auto; width: 100%;}
+
+/*Hamburger*/
+.hamburger{font:inherit;display:inline-block;overflow:visible;margin:0;padding:15px;cursor:pointer;transition-timing-function:linear;transition-duration:.15s;transition-property:opacity,filter;text-transform:none;color:inherit;border:0;background-color:transparent}.hamburger:hover{opacity:.7}.hamburger-box{position:relative;display:inline-block;width:40px;height:24px}.hamburger-inner{top:50%;display:block;margin-top:-2px}.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before{position:absolute;width:40px;height:2px;transition-timing-function:ease;transition-duration:.15s;transition-property:transform;border-radius:4px;background-color:#000}.hamburger-inner:after,.hamburger-inner:before{display:block;content:""}.hamburger-inner:before{top:-10px}.hamburger-inner:after{bottom:-10px}.hamburger--collapse .hamburger-inner{top:auto;bottom:0;transition-delay:.13s;transition-timing-function:cubic-bezier(.55,.055,.675,.19);transition-duration:.13s}.hamburger--collapse .hamburger-inner:after{top:-20px;transition:top .2s cubic-bezier(.33333,.66667,.66667,1) .2s,opacity .1s linear}.hamburger--collapse .hamburger-inner:before{transition:top .12s cubic-bezier(.33333,.66667,.66667,1) .2s,transform .13s cubic-bezier(.55,.055,.675,.19)}.hamburger--collapse.isActive .hamburger-inner{transition-delay:.22s;transition-timing-function:cubic-bezier(.215,.61,.355,1);transform:translate3d(0,-10px,0) rotate(-45deg)}.hamburger--collapse.isActive .hamburger-inner:after{top:0;transition:top .2s cubic-bezier(.33333,0,.66667,.33333),opacity .1s linear .22s;opacity:0}.hamburger--collapse.isActive .hamburger-inner:before{top:0;transition:top .1s cubic-bezier(.33333,0,.66667,.33333) .16s,transform .13s cubic-bezier(.215,.61,.355,1) .25s;transform:rotate(-90deg)}
+.hamburger{position: fixed; top: 0.9em; right: 1em; z-index: 1000; padding: 0;}
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {background-color: #999; transition: all ease .3s;}
+body.sticky .hamburger-inner, body.sticky .hamburger-inner:after, body.sticky .hamburger-inner:before {background-color: #999; transition: all ease .3s;}
+
+/*Desktop Menu*/
+.main__menu{display: none;}
+
+/*Mobile Menu*/
+#menu{background: #111; min-height: 100vh; position: fixed; opacity: 0; top: -100vh; left: 0; z-index: 997; width: 100%; text-align: center; display: flex; align-items: center; justify-content: center; transition: opacity ease 1s;}
+#menu ul{list-style-type: none; padding: 0; margin: 0; }
+#menu a{line-height: 3em; font-size: 2em; font-weight: 100; color: #ccc; text-decoration: none;} 
+#menu.menuActive{opacity: 1; top: 0; transition: opacity ease .3s;}
+#menu a:hover{color: #666; }
+
+.crumbs{display: none;}
+
+@media only screen and (min-width : 1024px) {
+    .logo{width: 340px; top: 1em; left: calc(50% - 170px);}
+    .hamburger{display: none;}
+    .header{height: 110px;}
+    .main__menu{background: #f1f1f1; display: block; height: auto; width: 100vw; top: 66px; left: 0; position: absolute; z-index: 998;}
+    .main__menu ul{list-style-type: none; padding: 0.9em 0; margin: 0; display: block; text-align: center; width: 100%;}
+    .main__menu li{display: inline-block;}
+    .main__menu li a{display: block; color: #111; font-size: 1.6em; padding: 0 1em; text-decoration: none;}
+
+ 
+}
