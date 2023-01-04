@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/pwa": "^2.6.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "vue-3d-model": "^1.1.0-aplha.0",
     "vue-scrollto": "^2.15.0",
     "vue2-smooth-scroll": "^1.1.0"
